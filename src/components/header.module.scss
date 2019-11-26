@@ -1,0 +1,133 @@
+@import '../styles/variables.scss';
+
+$logo-font-color-muted: #aaa;
+$logo-font-color: #fff;
+$logo-link-font-color: #00CF11;
+$logo-link-font-color-hover: #00FF41;
+
+$a-tags: 'a, a:link, a:visited';
+$a-tags-hover: 'a:hover';
+$a-tags-down: 'a:active';
+
+.header {
+  position: fixed;
+  top: 0;
+  // height: $header-height;
+  width: 100%;
+  background-color: #202124;
+  font-family: "Courier New", Courier, monospace;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+.davisallenLogo {
+  height: $header-height;
+  line-height: $header-height;
+  font-size: 32px;
+  color: $logo-font-color;
+  #{$a-tags} {
+    color: $logo-link-font-color;
+  }
+  #{$a-tags-hover} {
+    color: $logo-link-font-color-hover;
+  }
+  #{$a-tags-down} {
+    color: $logo-link-font-color;
+  }
+  padding-left: 0.3em;
+}
+
+.path {
+  display: none;
+  color: $logo-font-color-muted;
+  margin-right: 0.3em;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: $logo-link-font-color;
+}
+
+.dollarSign {
+  display: none;
+  margin-left: 0.3em;
+}
+
+.terminal {
+
+}
+
+.mainNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  max-height: 0;
+
+	transition-property: max-height;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+
+  &.active {
+    max-height: 150px;
+  }
+
+  li {
+    text-align: center;
+    margin: 15px auto;
+  }
+  #{$a-tags} {
+    color: $logo-link-font-color;
+  }
+  #{$a-tags-hover} {
+    color: $logo-link-font-color-hover;
+  }
+  #{$a-tags-down} {
+    color: $logo-link-font-color;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: $tablet-width) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    align-items: center;
+  }
+  .mainNav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-height: 114px;
+  }
+  .mainNav li {
+    margin: 0;
+  }
+  .navLink {
+    margin-left: 40px;
+  }
+  // .logo {
+  //   margin-top: 0;
+  // }
+  .navbar-toggle {
+    display: none;
+  }
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .path {
+    display: inline;
+  }
+  .dollarSign {
+    display: inline;
+  }
+  .homeLink {
+    display: none;
+  }
+}

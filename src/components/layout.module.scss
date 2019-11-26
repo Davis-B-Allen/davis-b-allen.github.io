@@ -1,0 +1,10 @@
+@import '../styles/variables.scss';
+
+
+.mainContainer {
+  background: lavenderblush;
+  margin: 0 auto;
+  margin-top: $header-height;
+  // max-width: 850px;
+  min-height: calc(100vh - #{$header-height});
+}
