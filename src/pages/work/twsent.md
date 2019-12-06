@@ -3,7 +3,7 @@ title: "Twitter Sentiment"
 date: "2019-11-29"
 rank: 3
 routename: twsent
-featuredImage: ../../images/scandit.png
+featuredImage: ../../images/twitterSentiment.png
 ---
 
 A Reddit Clone.

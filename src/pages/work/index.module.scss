@@ -54,8 +54,8 @@ $adjusted-width-desktop: calc(#{$grid-column-width-desktop} - 2 * #{$padding-siz
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
         position: relative;
+        text-align: center;
         img {
-          width: 100%;
           object-fit: cover;
         }
         figcaption {

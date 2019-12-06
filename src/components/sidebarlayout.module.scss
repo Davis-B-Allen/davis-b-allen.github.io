@@ -42,8 +42,8 @@
     background-color: #23020a;
     min-height: calc(100vh - #{$header-height});
     min-width: calc(200px + 4rem);
-    -webkit-mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
-    mask-image: url("http://support.nature.org/images/earth/assets/grit.png");
+    -webkit-mask-image: url("../images/grit.png");
+    mask-image: url("../images/grit.png");
   }
   .content {
     padding: 6rem;
