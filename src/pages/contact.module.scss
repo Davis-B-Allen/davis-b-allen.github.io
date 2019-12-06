@@ -1,0 +1,17 @@
+$a-tags: '&:link, &:visited';
+$a-tags-hover: '&:hover';
+$a-tags-down: '&:active';
+
+.contactWrapper {
+  a {
+    #{$a-tags} {
+      color: #5393fe;
+    }
+    #{$a-tags-hover} {
+      color: #6cc1ff;
+    }
+    #{$a-tags-down} {
+      color: #2e6ad0;
+    }
+  }
+}
