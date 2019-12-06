@@ -1,6 +1,9 @@
 ---
 title: "Transformers: Battlemasters"
 date: "2019-11-29"
+rank: 2
+routename: tfbm
+featuredImage: ../../images/battlemasters.jpg
 ---
 
 A boxing game for mobile devices. Boxing Transformers robots battle it out in the ring!

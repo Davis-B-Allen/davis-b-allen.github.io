@@ -1,8 +1,8 @@
 ---
-title: "Scandit"
+title: "Twitter Sentiment"
 date: "2019-11-29"
-rank: 1
-routename: scandit
+rank: 3
+routename: twsent
 featuredImage: ../../images/scandit.png
 ---
 

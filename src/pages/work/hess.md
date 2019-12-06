@@ -1,9 +1,9 @@
 ---
-title: "Scandit"
+title: "Hess Tractor Trek"
 date: "2019-11-29"
-rank: 1
-routename: scandit
-featuredImage: ../../images/scandit.png
+rank: 4
+routename: hess
+featuredImage: ../../images/hess.png
 ---
 
 A Reddit Clone.

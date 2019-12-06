@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout headerPath={post.frontmatter.routename}>
       <SEO title={post.frontmatter.title}/>
       <div>
         <h1>{post.frontmatter.title}</h1>
@@ -21,6 +21,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        routename
       }
     }
   }

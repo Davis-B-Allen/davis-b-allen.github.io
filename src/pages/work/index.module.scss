@@ -1,0 +1,101 @@
+$padding-size: 2rem;
+$grid-column-width: 320px;
+$grid-column-width-desktop: 512px;
+$adjusted-width: calc(#{$grid-column-width} - 2 * #{$padding-size});
+$adjusted-width-desktop: calc(#{$grid-column-width-desktop} - 2 * #{$padding-size});
+
+.hero {
+  /* Photo by mnm.all on Unsplash */
+  background: url(../../images/keyboard.png) center;
+  background-size: cover;
+  padding: 4rem 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+
+  color: white;
+
+  /* Grid styles */
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax($adjusted-width, 1fr));
+}
+
+.projects {
+  $border-radius: 0rem;
+  padding: $padding-size;
+  ul {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax($grid-column-width, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax($adjusted-width, 1fr));
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax($adjusted-width-desktop, 1fr));
+    }
+    grid-gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      // border: 1px solid #000000;
+      border-radius: $border-radius;
+      box-shadow: 0px 9px 24px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: #C0EFF9;
+        p {
+          .detailsArrow {
+            margin-left: 1.0rem;
+          }
+        }
+      }
+      figure {
+        margin: 0;
+        max-height: 220px;
+        overflow: hidden;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        position: relative;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        figcaption {
+          position: absolute;
+          top: 0;
+          background-color: rgba(0,0,0,.7);
+          width: 100%;
+          h3 {
+            margin: 0;
+            color: white;
+            padding: .75rem;
+            font-size: 1.25rem;
+          }
+        }
+      }
+      p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 1rem .75rem;
+        color: #666666;
+        .detailsArrow {
+          margin-left: 0.5rem;
+          transition: margin-left 0.3s;
+        }
+      }
+      a {
+        background-color: goldenrod;
+        text-decoration: none;
+        color: white;
+        border-radius: .25rem;
+        text-align: center;
+        display: inline-block;
+        transition: all .3s;
+        padding: .5rem 1rem;
+        margin: .5rem;
+        &:hover {
+          opacity: .1;
+        }
+      }
+    }
+  }
+}
