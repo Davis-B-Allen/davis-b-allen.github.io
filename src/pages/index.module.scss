@@ -1,0 +1,100 @@
+@import '../styles/variables.scss';
+
+$grid-padding-x: 2rem;
+
+$a-tags: '&:link, &:visited';
+$a-tags-hover: '&:hover';
+$a-tags-down: '&:active';
+
+.indexContainer {
+  min-height: calc(100vh - #{$header-height});
+  width: 100%;
+  background: url(../images/manhattan.jpg);
+  background-size: cover;
+  background-position: right top;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+
+  position: relative;
+}
+
+.hero {
+
+  color: white;
+  padding: 0 $grid-padding-x;
+
+  /* Grid styles */
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+
+  position: absolute;
+  width: calc(100% - 2 * #{$grid-padding-x});
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+
+}
+
+.portraitWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portrait {
+  border-radius: 50%;
+  background: rgba(127,127,127,0.7);
+  width: 200px;
+  box-shadow:inset 0px 0px 0px 10px #000;
+}
+
+.introText {
+  color: white;
+  font-size: 1.2rem;
+  max-width: 400px;
+}
+
+.aboutLink {
+  color: #5393fe;
+  text-decoration: none;
+  font-weight: bold;
+  #{$a-tags} {
+    color: #5393fe;
+  }
+  #{$a-tags-hover} {
+    color: #6cc1ff;
+  }
+  #{$a-tags-down} {
+    color: #2e6ad0;
+  }
+}
+
+.workLink {
+  color: #6cbb47;
+  text-decoration: none;
+  font-weight: bold;
+  #{$a-tags} {
+    color: #6cbb47;
+  }
+  #{$a-tags-hover} {
+    color: #84d260;
+  }
+  #{$a-tags-down} {
+    color: #4a8e2a;
+  }
+}
+
+.contactLink {
+  color: #f46b3f;
+  text-decoration: none;
+  font-weight: bold;
+  #{$a-tags} {
+    color: #f46b3f;
+  }
+  #{$a-tags-hover} {
+    color: #f48b3f;
+  }
+  #{$a-tags-down} {
+    color: #c34922;
+  }
+}
